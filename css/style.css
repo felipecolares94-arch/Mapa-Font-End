@@ -18,10 +18,9 @@ body{
 
   background:linear-gradient(
     90deg,
-    #3f37ff 0%,
-    #3f37ff 65%,
-    #d9ff72 65%,
-    #d9ff72 100%
+    #3f37ff 65%, 
+    #d9ff72 35% 
+    /* rgb(11, 11, 11) */
   );
 
   min-height:100vh;
@@ -134,8 +133,9 @@ nav a:hover{
 /* FOTO */
 
 .panel-right img{
-  width:350px;
-  height:450px;
+  width:min(350px, 100%);
+  max-width:350px;
+  height:auto;
   object-fit:cover;
   position:relative;
   left: 2%;
@@ -232,17 +232,13 @@ nav a:hover{
   color:white;
 }
 
-.titulo-principal{
+.sobre-text .sobre,
+.titulo-principal {
   color:#d9ff72;
-  font-size: 22px;
+  font-size:2rem;
   margin-bottom:20px;
   text-transform:uppercase;
-  letter-spacing:1px;
-}
-
-
-.sobre-text .sobre{
-  color:#d9ff72; 
+  letter-spacing:2px;
 }
 
 .sobre-text p{
@@ -275,7 +271,7 @@ nav a:hover{
     text-align:center;
 
     gap:50px;
-}
+  }
 
   .social-links{
     justify-content:center;
@@ -299,6 +295,19 @@ nav a:hover{
     margin-top:20px;
   }
 
+  .panel-right{
+    max-width:420px;
+    margin:0 auto;
+    height:auto;
+  }
+
+  .panel-right img,
+  .img-sobre img{
+    width:100%;
+    max-width:350px;
+    height:auto;
+  }
+
 }
 
 @media(max-width:600px){
@@ -313,8 +322,9 @@ nav a:hover{
 
   .panel-right img,
   .img-sobre img{
-    width:250px;
-    height:320px;
+    width:100%;
+    max-width:280px;
+    height:auto;
   }
 
   .decor-square{
@@ -416,6 +426,10 @@ nav a:hover{
   color:#3f37ff;
 }
 
+.btn-cancelar{
+  min-width:140px;
+}
+
 .formulario-contato{
   display:grid;
   gap:18px;
@@ -429,17 +443,16 @@ nav a:hover{
 .formulario-contato input,
 .formulario-contato textarea{
   width:100%;
-  padding:12px;
+  padding:16px;
   border:1px solid #e2e8f0;
-  border-radius:8px;
+  border-radius:14px;
   background:#f8fafc;
-  font-family:inherit;
-  font-size:14px;
+  font-size:1rem;
   color:#0f172a;
 }
 
 .formulario-contato textarea{
-  min-height:100px;
+  min-height:160px;
   resize:vertical;
 }
 
@@ -447,7 +460,6 @@ nav a:hover{
   align-self:flex-start;
   width:auto;
   min-width:140px;
-  margin-top:0;
 }
 
 .feedback{
@@ -475,6 +487,46 @@ nav a:hover{
     flex-direction:column;
     align-items:stretch;
   }
+
+  .btn-cancelar{
+    width:100%;
+  }
+}
+
+.sobre {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 20px; 
+} 
+
+.title{
+  font-size: 20px;
+  background-color:white;
+  padding: 15px;
+  border-radius: 15px;
+  font-weight: 500;
+  margin-top: 16px;
+  max-width: 64%;
+}
+
+
+.formulario-contato input,
+.formulario-contato textarea {
+  padding: 12px;
+  border: solid 1px #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.formulario-contato textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formulario-contato button {
+  align-self: flex-start;
+  margin-top: 0;
 }
 
 .escondido {
