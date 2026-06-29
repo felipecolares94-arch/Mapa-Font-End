@@ -18,8 +18,10 @@ body{
 
   background:linear-gradient(
     90deg,
+    #3f37ff 0%,
     #3f37ff 65%,
-    #d9ff72 35%
+    #d9ff72 65%,
+    #d9ff72 100%
   );
 
   min-height:100vh;
