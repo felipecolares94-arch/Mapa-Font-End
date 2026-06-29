@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FelipeColares.Dev</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <section class="contato-page">
+    <div class="contato-card">
+      <div class="contato-header">
+        <h2>Vamos conversar?</h2>
+        <p>Você pode me encontrar nos meus perfis ou me mandar uma mensagem</p>
+      </div>
+
+      <div class="contato-actions">
+        <a class="btn btn-secondary" href="https://github.com/felipecolares94-arch" target="_blank">Meu GitHub</a>
+        <button class="btn btn-primary btn-mensagem" type="button">Enviar mensagem</button>
+      </div>
+
+      <form class="formulario-contato escondido">
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" class="input-nome" placeholder="Digite seu nome" />
+        <label for="email">Email:</label>
+        <input id="email" type="email" class="input-email" placeholder="Digite seu email" />
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" class="input-mensagem" placeholder="Escreva sua mensagem"></textarea>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <p class="feedback"></p>
+      </form>
+    </div>
+
+    <div class="contato-qr">
+      <div class="qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/5531975338034"alt="QR Code WhatsApp">
+        <p class="qr-text">Me envie uma mensagem no WhatsApp</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
